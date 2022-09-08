@@ -1,0 +1,28 @@
+<br>
+<br>
+<div class="container">
+    <table class="table table-striped" style="background-color: rgb(245, 245, 117);">
+      <tbody>
+        <th>SUPPLIER ID</th>
+        <TH>SUPPLIER NAME</TH>
+        <TH>SUPPLIER CONTACT</TH>
+        <TH>EDIT ACTION</TH>
+        <TH>DELETE ACTION</TH>
+
+        <tr *ngFor="let p of slist">
+          <td>{{p.sid}}</td>
+          <td>{{p.sname}}</td>
+          <td>{{p.number}}</td>
+          
+          <td><a class="btn"  (click)="editData(p)">
+              <i class="fa fa-edit">Edit</i>
+            </a>
+          </td>
+          <td><a class="btn" (click)="deleteData(p.sid)">
+              <i class="fa fa-trash">Delete</i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

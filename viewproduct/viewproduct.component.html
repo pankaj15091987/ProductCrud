@@ -1,0 +1,54 @@
+<br>
+<br>
+<div class="col-md-8" id="htmlData">
+<div class="container">
+    <table class="table table-striped" style="background-color: rgb(186, 252, 253);">
+      <tbody>
+        <th>ID</th>
+        <TH>PRODUCT NAME</TH>
+        <TH>PRODUCT PRICE</TH>
+        <TH>PRODUCT DESCRIPTION</TH>
+        <TH>SUPPLIER NAME</TH>
+        <TH>EDIT ACTION</TH>
+        <TH>DELETE ACTION</TH>
+
+        <tr *ngFor="let p of plist">
+          <td>{{p.id}}</td>
+          <td>{{p.productName}}</td>
+          <td>{{p.productPrice}}</td>
+          <td>{{p.productDescription}}</td>
+          <td>{{p.supplier.sname}}</td>
+          <td><a class="btn"  (click)="editData(p)">
+              <i class="fa fa-edit">Edit</i>
+            </a>
+          </td>
+          <td><a class="btn" (click)="deleteData(p.id)">
+              <i class="fa fa-trash">Delete</i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <div class="col-md-4 text-right">
+      <button class="btn btn-success btn-block" (click)="openPDF()">Download PDF</button>
+  </div>
+
+
+    <!-- <div class="col-md-8" id="htmlData">
+      <table class="table table-bordered">
+          <tr class="table-primary">
+              <th>Product Id</th>
+              <th>Product Name</th>
+              <th>Product Description</th>
+              <th>Prouct Price</th>
+          </tr>
+          <tr *ngFor="let prod of product">
+              <th>{{prod.id}}</th>
+              <td>{{prod.productName}}</td>
+              <td>{{prod.productDescription}}</td>
+              <td>{{prod.productPrice}}</td>
+          </tr>
+      </table>
+  </div> -->

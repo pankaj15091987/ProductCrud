@@ -1,0 +1,20 @@
+<br>
+<br>
+<div class="container">
+    <div class="row">
+    
+    <div class="form-group col-md-6">
+          <input type="text" class="form-control"  placeholder="Enter PRODUCT NAME" [(ngModel)]="common.p.productName">
+      </div>
+      <div class="form-group col-md-6">
+          <input type="text" class="form-control"  placeholder="Enter Product PRICE" [(ngModel)]="common.p.productPrice">
+      </div>
+    
+    </div>
+
+    <div class="form-group">
+        <input type="text" class="form-control"  placeholder="Enter PRODUCT DESCRIPTION" [(ngModel)]="common.p.productDescription">
+    </div>
+    
+      <div class="form-group"> 
+          <button class="btn btn-success btn-lg btn-block" (click)="submitData(common.p)">Submit</button></div></div>
